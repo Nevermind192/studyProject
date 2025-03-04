@@ -4,21 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <header class="container">
-            <span class="logo">logo</span>
-            <nav>
-                <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">News</a></li>
-                    <li class="btn"><a href="#">Contact us</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div id="header"></div>
 
         <div class="hero container">
             <div class="hero--info">
@@ -27,7 +17,7 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
                 <button class="btn">Get more details</button>
             </div>
-            <img src="img/joystick.svg" alt="">
+            <img src="img/home/joystick.svg" alt="">
         </div>
 
         <div class="container trending">
@@ -36,20 +26,20 @@
 
             <div class="games">
                 <div class="block">
-                    <img src="img/game1.png" alt="">
-                    <span><img src="img/fire.svg" alt=""> 40 Followers</span>
+                    <img src="img/home/game1.png" alt="">
+                    <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
                 </div>
                 <div class="block">
-                    <img src="img/game2.png" alt="">
-                    <span><img src="img/fire.svg" alt=""> 40 Followers</span>
+                    <img src="img/home/game2.png" alt="">
+                    <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
                 </div>
                 <div class="block">
-                    <img src="img/game3.png" alt="">
-                    <span><img src="img/fire.svg" alt=""> 40 Followers</span>
+                    <img src="img/home/game3.png" alt="">
+                    <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
                 </div>
                 <div class="block">
-                    <img src="img/game4.png" alt="">
-                    <span><img src="img/fire.svg" alt=""> 40 Followers</span>
+                    <img src="img/home/game4.png" alt="">
+                    <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
                 </div>
             </div>
         </div>
@@ -61,7 +51,7 @@
         <div class="container banner">
             <h3>Lorem Ipsum</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-            <img src="img/banner.png" alt="">
+            <img src="img/home/banner.png" alt="">
         </div>
     </div>
 
@@ -70,34 +60,34 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
         <div class="info">
             <div class="block">
-                <img src="img/features1.png" alt="">
+                <img src="img/home/features1.png" alt="">
                 <p>Mobile Game Development</p>
-                <img src="img/arrow.png" alt="">
+                <img src="img/home/arrow.png" alt="">
             </div>
             <div class="block">
-                <img src="img/features2.png" alt="">
+                <img src="img/home/features2.png" alt="">
                 <p>PC Game Development</p>
-                <img src="img/arrow.png" alt="">
+                <img src="img/home/arrow.png" alt="">
             </div>
             <div class="block">
-                <img src="img/features3.png" alt="">
+                <img src="img/home/features3.png" alt="">
                 <p>PS4 Game Development</p>
-                <img src="img/arrow.png" alt="">
+                <img src="img/home/arrow.png" alt="">
             </div>
             <div class="block">
-                <img src="img/features4.png" alt="">
+                <img src="img/home/features4.png" alt="">
                 <p>AR/VR Solutions</p>
-                <img src="img/arrow.png" alt="">
+                <img src="img/home/arrow.png" alt="">
             </div>
             <div class="block">
-                <img src="img/features5.png" alt="">
+                <img src="img/home/features5.png" alt="">
                 <p>AR/VR design</p>
-                <img src="img/arrow.png" alt="">
+                <img src="img/home/arrow.png" alt="">
             </div>
             <div class="block">
-                <img src="img/features6.png" alt="">
+                <img src="img/home/features6.png" alt="">
                 <p>3D Modelings</p>
-                <img src="img/arrow.png" alt="">
+                <img src="img/home/arrow.png" alt="">
             </div>
         </div>
     </div>
@@ -107,14 +97,14 @@
             <h3>Our Recent Projects</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <div class="images">
-                <img src="img/project1.png" alt="">
-                <img src="img/project2.png" alt="">
-                <img src="img/project3.png" alt="">
+                <img src="img/home/project1.png" alt="">
+                <img src="img/home/project2.png" alt="">
+                <img src="img/home/project3.png" alt="">
             </div>
             <div class="images">
-                <img src="img/project5.png" alt="">
-                <img src="img/project4.png" alt="">
-                <img src="img/project6.png" alt="">
+                <img src="img/home/project5.png" alt="">
+                <img src="img/home/project4.png" alt="">
+                <img src="img/home/project6.png" alt="">
             </div>
             <a href="#" class="see-all">SEE ALL</a>
         </div>
@@ -167,13 +157,5 @@
         <hr>
         <p>Copyright ® 2021 Lorem All rights Rcerved</p>
     </footer>
-    <script>
-        function checkEmail() {
-            let email = document.querySelector('#emailField').value;
-            if (!email.includes('@')) alert("Введите корректный адрес электронной почты!")
-            else if (!email.includes('.')) alert ("Введите корректный адрес электронной почты!")
-            else alert("Подписка на рассылку успешно оформлена!")
-        }
-    </script>
 </body>
 </html>

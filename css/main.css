@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -21,12 +21,20 @@ img {
 }
 
 .wrapper {
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(74,40,0,1) 100%);
+    background: linear-gradient(180deg, rgba(1,1,1,1) 0%, rgba(26,14,1,1) 100%);
     width: 100%;
+    overflow: hidden;
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container2 {
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -116,17 +124,18 @@ header nav ul li.btn a:hover, .email .block button:hover {
     margin: 30px 0;
 }
 
-.hero--info .btn {
+.hero--info .btn, .hero-about .info .btn {
     background: linear-gradient(90deg, rgba(250,131,5,1) 0000000%, rgba(251,158,60,1) 100%);
-    padding: 15px 30px;
+    padding: 15px 40px;
     border-radius: 40px;
     border: 0;
     transition: all 500ms ease;
     color: #fff;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
-.hero--info .btn:hover {
+.hero--info .btn:hover, .hero-about .info .btn:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -134,7 +143,7 @@ header nav ul li.btn a:hover, .email .block button:hover {
 .hero img {
     position: absolute;
     top: -150px;
-    right: -50px;
+    right: -100px;
 }
 
 /* Секция с играми */
@@ -213,7 +222,7 @@ header nav ul li.btn a:hover, .email .block button:hover {
 
 /*Секция с изображением*/
 .features {
-    background: url('/img/BG.png') no-repeat center center fixed;
+    background: url('/img/home/BG.png') no-repeat center center fixed;
     background-size: cover;
     padding: 80px 0;
 }
@@ -339,7 +348,165 @@ header nav ul li.btn a:hover, .email .block button:hover {
     z-index: 2;
 }
 
-/*Футер*/
+/* page about us */
+.hero-about {
+    position: relative;
+}
+
+.hero-about .info {
+    width: 430px;
+    padding-top: 100px;
+    padding-bottom: 250px;
+}
+
+.hero-about .info a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.hero-about .info .active {
+    color: #E47500;
+}
+
+.hero-about .info h1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.hero-about .info .btn {
+    margin-top: 60px;
+}
+
+.hero-about .info .btn img {
+    position: relative;
+    right: -15px;
+}
+
+.hero-about > img {
+    position: absolute;
+    right: -160px;
+    top: 0;
+}
+
+/*work section*/
+.work {
+    padding: 80px 0;
+}
+
+.work h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 45px;
+}
+
+.work .blocks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.work .blocks .block {
+    background: #1C140F;
+    width: 25%;
+    border-radius: 10px;
+    padding: 50px 35px;
+}
+
+.work .blocks .block span {
+    font-size: 14px;
+}
+
+.work .blocks .block h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.work .blocks .block .badge {
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+
+.work .blocks .block .badge.purple {
+    background: rgba(176, 0, 220, 0.11);
+}
+
+.work .blocks .block .badge.brown {
+    background: rgba(220, 66, 0, 0.11);
+}
+
+.work .blocks .block .badge.green {
+    background: rgba(0, 220, 141, 0.11);
+}
+
+.work .blocks .block p {
+    font-size: 14px;
+}
+
+/*team section*/
+.team {
+    padding: 150px 0 40px 0;
+}
+
+.team h2 {
+    font-size: 25px;
+    font-weight: 600;
+    /*margin-bottom: 50px;*/
+}
+
+.team .blocks {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.team .blocks .block {
+    background: #1C140F;
+    padding: 40px 85px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.team .blocks .block h3 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.team .blocks .block span {
+    font-weight: 300;
+}
+
+/*Description*/
+.description {
+    background: #1C140F;
+    padding-top: 100px;
+}
+
+.description .container {
+    display: flex;
+    gap: 70px;
+}
+
+.description .info {
+    margin-top: 30px;
+    flex: 1;
+}
+
+.description .info h1 {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: 600;
+    max-width: 530px;
+}
+
+.description .info p {
+    margin-top: 30px;
+    line-height: 200%;
+    max-width: 540px;
+}
+
+/*Footer*/
 footer {
     background: #070707;
     padding: 80px 0 30px 0;

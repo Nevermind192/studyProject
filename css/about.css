@@ -1,0 +1,158 @@
+/* ----------PAGE ABOUT US---------- */
+
+.hero-about {
+    position: relative;
+}
+
+.hero-about .info {
+    width: 430px;
+    padding-top: 100px;
+    padding-bottom: 250px;
+}
+
+.hero-about .info a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.hero-about .info .active {
+    color: #E47500;
+}
+
+.hero-about .info h1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.hero-about .info .btn {
+    margin-top: 60px;
+}
+
+.hero-about .info .btn img {
+    position: relative;
+    right: -15px;
+}
+
+.hero-about > img {
+    position: absolute;
+    right: -160px;
+    top: 0;
+}
+
+/*work section*/
+.work {
+    padding: 80px 0;
+}
+
+.work h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 45px;
+}
+
+.work .blocks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.work .blocks .block {
+    background: #1C140F;
+    width: 25%;
+    border-radius: 10px;
+    padding: 50px 35px;
+}
+
+.work .blocks .block span {
+    font-size: 14px;
+}
+
+.work .blocks .block h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.work .blocks .block .badge {
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+
+.work .blocks .block .badge.purple {
+    background: rgba(176, 0, 220, 0.11);
+}
+
+.work .blocks .block .badge.brown {
+    background: rgba(220, 66, 0, 0.11);
+}
+
+.work .blocks .block .badge.green {
+    background: rgba(0, 220, 141, 0.11);
+}
+
+.work .blocks .block p {
+    font-size: 14px;
+}
+
+/*team section*/
+.team {
+    padding: 150px 0 40px 0;
+}
+
+.team h2 {
+    font-size: 25px;
+    font-weight: 600;
+    /*margin-bottom: 50px;*/
+}
+
+.team .blocks {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.team .blocks .block {
+    background: #1C140F;
+    padding: 40px 85px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.team .blocks .block h3 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.team .blocks .block span {
+    font-weight: 300;
+}
+
+/*Description*/
+.description {
+    background: #1C140F;
+    padding-top: 100px;
+}
+
+.description .container {
+    display: flex;
+    gap: 70px;
+}
+
+.description .info {
+    margin-top: 30px;
+    flex: 1;
+}
+
+.description .info h1 {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: 600;
+    max-width: 530px;
+}
+
+.description .info p {
+    margin-top: 30px;
+    line-height: 200%;
+    max-width: 540px;
+}

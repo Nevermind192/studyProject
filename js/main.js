@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let currentPath = window.location.pathname;
         let menuItems = document.querySelectorAll("nav ul li a");
 
+        if(currentPath === '/contacts.html') {
+            return;
+        }
         menuItems.forEach(item => {
             if (item.getAttribute("href") === currentPath) {
                 item.parentElement.classList.add("active");

@@ -1,0 +1,132 @@
+/*---------CONTACTS PAGE----------*/
+
+.hero-contacts .center-text {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.hero-contacts h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 33px;
+}
+
+.hero-contacts > img {
+    width: 70%;
+    margin: 80px 15%;
+}
+
+.hero-contacts .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-contacts .links p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 325px;
+}
+
+.hero-contacts .links .block {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 15px;
+}
+
+.hero-contacts .links .block.media {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-contacts .links .block.media h3 {
+    align-self: flex-start;
+    font-size: 16px;
+}
+
+.hero-contacts .links .block .media-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.hero-contacts .links hr {
+    border: 0;
+    background: #cccccc;
+    width: 2px;
+    height: 125px;
+    align-items: center;
+}
+
+/*----------Код формы--------*/
+.feedback {
+    padding: 70px 0;
+    background: #1C140F;
+}
+
+.feedback h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.feedback p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.feedback form {
+    margin: 80px auto;
+    width: 600px;
+}
+
+.feedback form .inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback form .inline > div {
+    width: 50%;
+}
+
+.feedback form label {
+    color: #4F4F4F;
+}
+
+.feedback form input, .feedback form textarea {
+    background: rgba(255, 255, 255, 7%);
+    border-radius: 10px;
+    border: 0.6px solid #CECECE;
+    display: block;
+    width: 92%;
+    padding: 15px 10px;
+    outline: none;
+    color: #ffffff;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.feedback form .one-line {
+    width: 96%;
+}
+
+.feedback form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.feedback form button {
+    background: #DC7000;
+    border-radius: 5px;
+    border: 0;
+    float: right;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 15px 35px;
+    transition: all 500ms ease;
+}
+
+.feedback form button:hover {
+    background: #a02604;
+}

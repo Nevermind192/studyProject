@@ -357,6 +357,16 @@ header nav ul li.btn a:hover, .email .block button:hover {
     z-index: 2;
 }
 
+/*------элемент Home > текущая страница------*/
+.hero-about .info a, .statistic a, .hero-contacts a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.hero-about .info .active, .statistic a.active, .hero-contacts a.active {
+    color: #E47500;
+}
+
 /* -------------FOOTER-------------- */
 footer {
     background: #070707;

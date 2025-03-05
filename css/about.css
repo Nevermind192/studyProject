@@ -10,15 +10,6 @@
     padding-bottom: 250px;
 }
 
-.hero-about .info a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.hero-about .info .active {
-    color: #E47500;
-}
-
 .hero-about .info h1 {
     margin-top: 50px;
     margin-bottom: 40px;

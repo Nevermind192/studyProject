@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/forms.css">
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -41,7 +42,7 @@
             </div>
         </div>
 
-        <div class="feedback">
+        <div class="feedback form-section">
             <div class="container">
                 <h2>Say hello</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing .</p>

@@ -1,0 +1,83 @@
+/*ФОРМА ДЛЯ СТРАНИЦ: REGISTER И CONTACTS*/
+
+.feedback {
+    padding: 70px 0;
+    background: #1C140F;
+}
+
+.registration {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.form-section h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-section p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-section form {
+    margin: 80px auto;
+    width: 600px;
+}
+
+.form-section form .inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-section form .inline > div {
+    width: 48%;
+}
+
+.form-section form label {
+    color: #4F4F4F;
+}
+
+.form-section form input, .feedback form textarea {
+    background: rgba(255, 255, 255, 7%);
+    border-radius: 10px;
+    border: 0.6px solid #CECECE;
+    display: block;
+    width: 92%;
+    padding: 15px 10px;
+    outline: none;
+    color: #ffffff;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.form-section form .one-line {
+    width: 96%;
+}
+
+.form-section form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.form-section form button {
+    background: #DC7000;
+    border-radius: 5px;
+    border: 0;
+    float: right;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 15px 35px;
+    transition: all 500ms ease;
+}
+
+.form-section form button:hover {
+    background: #a02604;
+}
+
+.registration form .error {
+    margin-bottom: 10px;
+    color: #9a371a;
+}

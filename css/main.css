@@ -99,6 +99,17 @@ header nav ul li.btn a, .email .block button {
     transition: all 500ms ease;
 }
 
+header nav ul li.btn.auth a {
+    background: black;
+    border: 2px solid #898989;
+}
+
+header nav ul li.btn.auth a:hover {
+    background: #2f2e2e;
+    color: white;
+}
+
+
 header nav ul li.btn a:hover, .email .block button:hover {
     background: #a02604;
 }
@@ -106,7 +117,7 @@ header nav ul li.btn a:hover, .email .block button:hover {
 /* -----------PAGE HOME------------ */
 
 .hero {
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     position: relative;
     z-index: 1;
 }
@@ -150,7 +161,7 @@ header nav ul li.btn a:hover, .email .block button:hover {
 .hero img {
     position: absolute;
     top: -150px;
-    right: -100px;
+    right: -110px;
 }
 
 /* Секция с играми */

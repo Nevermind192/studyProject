@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="wrapper">
-        <div id="header"></div>
+        <?php require_once "includes/header.php" ?>
 
         <div class="hero-about container">
             <div class="info">
-                <a href="/">Home</a> > <a class="active" href="/about.html">About us</a>
+                <a href="/">Home</a> > <a class="active" href="/about.php">About us</a>
                 <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 <button class="btn">Get in touch <img src="img/aboutUs/arrow-btn.png" alt=""> </button>
@@ -79,9 +79,9 @@
             </div>
         </div>
 
-        <div id="email"></div>
-
-        <div id="footer"></div>
+        <?php require_once "includes/email.php" ?>
     </div>
+
+    <?php require_once "includes/footer.php" ?>
 </body>
 </html>

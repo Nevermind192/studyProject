@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="wrapper">
-        <div id="header"></div>
+        <?php require_once "includes/header.php" ?>
 
         <div class="statistic container">
-            <a href="/">Home</a> > <a class="active" href="/services.html">Services</a>
+            <a href="/">Home</a> > <a class="active" href="/services.php">Services</a>
             <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <div class="blocks">
@@ -94,9 +94,9 @@
             <img src="img/services/game-banner3.png" alt="">
         </div>
 
-        <div id="email"></div>
-
-        <div id="footer"></div>
+        <?php require_once "includes/email.php" ?>
     </div>
+
+    <?php require_once "includes/footer.php" ?>
 </body>
 </html>

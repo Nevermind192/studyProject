@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div id="header"></div>
+        <?php require_once "includes/header.php" ?>
 
         <div class="hero container">
             <div class="hero--info">
@@ -109,53 +109,9 @@
             <a href="#" class="see-all">SEE ALL</a>
         </div>
 
-        <div class="container email">
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <div class="block">
-                <div>
-                    <h4>Stay in the loop</h4>
-                    <p>Subscribe to receive the latest news and updates about TDA.
-                        We promise not to spam you! </p>
-                </div>
-                <div>
-                    <input type="email" id="emailField" placeholder="Enter email address">
-                    <button onclick="checkEmail()">Continue</button>
-                </div>
-            </div>
-        </div>
+        <?php require_once "includes/email.php" ?>
     </div>
 
-    <footer>
-        <div class="blocks container">
-            <div>
-                <span class="logo">logo</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                <p>@Logo</p>
-            </div>
-            <div>
-                <h4>About us</h4>
-                <ul>
-                    <li>Zeux</li>
-                    <li>Portfolio</li>
-                    <li>Careers</li>
-                    <li>Contact us</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact us</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <p>+908 89097 890</p>
-            </div>
-            <div class="images">
-                <img src="img/footer1.png" alt="">
-                <img src="img/footer2.png" alt="">
-                <img src="img/footer3.png" alt="">
-                <img src="img/footer4.png" alt="">
-            </div>
-        </div>
-        <hr>
-        <p>Copyright ® 2021 Lorem All rights Rcerved</p>
-    </footer>
+    <?php require_once "includes/footer.php" ?>
 </body>
 </html>

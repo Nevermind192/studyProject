@@ -3,6 +3,8 @@ $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
+    $pdo = include_once "connection.php";
+
     $login = trim($_POST["login"]);
     $username = trim($_POST["username"]);
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
@@ -29,35 +31,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $error = "ERROR: Password must contain at least 8 characters, including uppercase, lowercase, a number, and a special character.";
     }
-    else
-    {
-        try
-        {
-            $pdo = new PDO('mysql:host=localhost;dbname=studyProject', 'root', '', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-            $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login OR email = :email");
-            $stmt->execute(['login' => $login, 'email' => $email]);
+    else {
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login OR email = :email");
+        $stmt->execute(['login' => $login, 'email' => $email]);
 
-            if ($stmt->fetch())
+        if ($stmt->rowCount() > 0)
+        {
+            $error = "ERROR: User with this login or email already exists.";
+        }
+        else
+        {
+            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+            $stmt = $pdo->prepare("INSERT INTO users (login, username, email, password) VALUES (:login, :username, :email, :password)");
+
+            try
             {
-                $error = "ERROR: User with this login or email already exists.";
-            }
-            else
-            {
-                $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-                $stmt = $pdo->prepare("INSERT INTO users (login, username, email, password) VALUES (:login, :username, :email, :password)");
-                $stmt->execute([
+                if ($stmt->execute([
                     'login' => $login,
                     'username' => $username,
                     'email' => $email,
                     'password' => $passwordHash
-                ]);
-
-                header("Location: auth.php");
+                ]))
+                {
+                    header('Location: auth.php');
+                    exit();
+                }
+                else
+                {
+                    $error = "ERROR: Registration failed. Please try again.";
+                }
             }
-        }
-        catch (PDOException $e)
-        {
-            $message = "Database error: " . $e->getMessage();
+            catch (PDOException $exception)
+            {
+                $error = "Ошибка при добавлении нового пользователя: " . $exception->getMessage();
+            }
         }
     }
 }

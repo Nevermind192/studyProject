@@ -25,20 +25,9 @@
             <h3>Currently Trending Games</h3>
 
             <div class="games">
+
                 <div class="block">
                     <img src="img/home/game1.png" alt="">
-                    <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
-                </div>
-                <div class="block">
-                    <img src="img/home/game2.png" alt="">
-                    <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
-                </div>
-                <div class="block">
-                    <img src="img/home/game3.png" alt="">
-                    <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
-                </div>
-                <div class="block">
-                    <img src="img/home/game4.png" alt="">
                     <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
                 </div>
             </div>

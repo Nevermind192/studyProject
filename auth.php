@@ -6,10 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $login = trim($_POST['login']);
     $password = trim($_POST['password']);
 
+    $pdo = include_once __DIR__ . "/connection.php";
+
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login OR email = :login");
+
     try
     {
-        $pdo = new PDO('mysql:host=localhost;dbname=studyProject', 'root', '');
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login OR email = :login");
         $stmt->execute(['login' => $login, 'email' => $login]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -30,10 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $error = "ERROR: Wrong login or password";
         }
     }
-    catch(PDOException $exception)
+    catch (PDOException $exception)
     {
-        var_dump ($exception->getMessage());
+        $error = "Ошибка при входе в аккаунт: " . $exception->getMessage();
     }
+
 }
 ?>
 

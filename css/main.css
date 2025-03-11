@@ -190,9 +190,11 @@ header nav ul li.btn a:hover, .email .block button:hover {
 
 .trending .games {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     padding: 50px 0;
+    gap: 20px;
 }
 
 .trending .games span {

@@ -21,16 +21,39 @@
         </div>
 
         <div class="container trending">
-            <a href="#" class="see-all">SEE ALL</a>
+            <a href="/trending.php" class="see-all">SEE ALL</a>
             <h3>Currently Trending Games</h3>
 
-            <div class="games">
+            <?php
+            $pdo = include_once('connection.php');
 
-                <div class="block">
-                    <img src="img/home/game1.png" alt="">
-                    <span><img src="img/home/fire.svg" alt=""> 40 Followers</span>
+            $sql = "SELECT * FROM trending ORDER BY followers DESC LIMIT 4";
+            $stmt = $pdo->prepare($sql);
+
+            try
+            {
+                $stmt->execute();
+                $games = $stmt->fetchAll(PDO::FETCH_OBJ);
+            }
+            catch (PDOException $exception)
+            {
+                echo "<p class='error'>Ошибка загрузки игр: " . htmlspecialchars($exception->getMessage()) . "</p>";
+                $games = [];
+            }
+            ?>
+
+            <?php if (!empty($games)): ?>
+                <div class="games">
+                    <?php foreach ($games as $game): ?>
+                        <div class="block">
+                            <img src="img/home/<?= htmlspecialchars($game->image) ?>" alt="Game Image">
+                            <span><img src="img/home/fire.svg" alt=""> <?= htmlspecialchars($game->followers) ?> Followers</span>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
+            <?php else: ?>
+                <p class="no-games">No trending games available.</p>
+            <?php endif; ?>
         </div>
 
         <div class="container big-text">

@@ -1,10 +1,13 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/trending.css">
 </head>
 <body>
 <div class="wrapper">
@@ -37,6 +40,9 @@
                     <div class="block">
                         <img src="img/home/<?= htmlspecialchars($game->image) ?>" alt="Game Image">
                         <span><img src="img/home/fire.svg" alt=""> <?= htmlspecialchars($game->followers) ?> Followers</span>
+                        <?php if(isset($_COOKIE['login'])) : ?>
+                        <a href="delete.php?id=<?= $game->id ?>">Delete</a>
+                        <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
             </div>

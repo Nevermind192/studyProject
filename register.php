@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                     'password' => $passwordHash
                 ]);
 
-                header("Location: login.php");
+                header("Location: auth.php");
             }
         }
         catch (PDOException $e)
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Регистрация</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/forms.css">
     <script src="js/main.js"></script>
